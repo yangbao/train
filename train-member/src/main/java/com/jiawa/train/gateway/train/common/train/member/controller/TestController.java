@@ -1,4 +1,4 @@
-package com.jiawa.train.common.train.member.controller;
+package com.jiawa.train.gateway.train.common.train.member.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

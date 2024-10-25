@@ -1,4 +1,4 @@
-package com.jiawa.train.common.train.member;
+package com.jiawa.train.gateway.train.common.train.member;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
