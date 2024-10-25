@@ -1,0 +1,6 @@
+GET http://localhost:8001/member/hello
+Accept: application/json
+
+<> 2024-10-25T103202.200.json
+
+###
