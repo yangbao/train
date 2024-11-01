@@ -1,9 +1,8 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    APP.vue放所有页面都有的东西
   </nav>
-  <router-view/>
+  <router-view/> <!--直接导航-->
 </template>
 
 <style>

@@ -6,6 +6,7 @@ import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/reset.css';
 import * as Icons from '@ant-design/icons-vue';
 
+// 创建并挂载 Vue 应用
 const app = createApp(App);
 app.use(Antd).use(store).use(router).mount('#app');
 
