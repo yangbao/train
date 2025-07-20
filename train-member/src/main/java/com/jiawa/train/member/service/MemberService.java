@@ -85,7 +85,11 @@ public class MemberService {
 
         // 如果手机号不存在，则插入一条记录
         if (ObjectUtil.isNull(memberDB)) {
-            throw new BusinessException(BusinessExceptionEnum.MEMBER_MOBILE_NOT_EXIST);
+            MemberRegisterReq memberRegisterReq = new MemberRegisterReq();
+            memberRegisterReq.setMobile(mobile);
+            register(memberRegisterReq);
+            log.info(BusinessExceptionEnum.MEMBER_MOBILE_NOT_EXIST.toString()+",需要直接注册");
+//            throw new BusinessException(BusinessExceptionEnum.MEMBER_MOBILE_NOT_EXIST);
         }
 
         // 校验短信验证码

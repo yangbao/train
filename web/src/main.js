@@ -1,4 +1,6 @@
-import {createApp} from 'vue'
+import {
+	createApp
+} from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -13,22 +15,22 @@ app.use(Antd).use(store).use(router).mount('#app');
 // 全局使用图标
 const icons = Icons;
 for (const i in icons) {
-    app.component(i, icons[i]);
+	app.component(i, icons[i]);
 }
 /**axios拦截器, 打印请求参数和返回结果
  */
-axios.interceptors.request.use(function (config) {
-    console.log('请求参数：', config);
-    return config;
+axios.interceptors.request.use(function(config) {
+	console.log('request parameter：', config);
+	return config;
 }, error => {
-    return Promise.reject(error);
+	return Promise.reject(error);
 });
-axios.interceptors.response.use(function (response) {
-    console.log('返回结果：', response);
-    return response;
+axios.interceptors.response.use(function(response) {
+	console.log('return result：', response);
+	return response;
 }, error => {
-    console.log('返回错误：', error);
-    return Promise.reject(error);
+	console.log('return error：', error);
+	return Promise.reject(error);
 });
 axios.defaults.baseURL = process.env.VUE_APP_SERVER;
 console.log('环境：', process.env.NODE_ENV);
